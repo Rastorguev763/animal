@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  image_classifier:
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+    container_name: image_classifier
+    ports:
+      - "8501:8501"
