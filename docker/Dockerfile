@@ -28,7 +28,6 @@ COPY ./src /usr/src/app/
 COPY ./poetry.lock /usr/src/app/poetry.lock
 COPY ./pyproject.toml /usr/src/app/pyproject.toml
 # Установка зависимостей через Poetry
-# Настроим таймаут для Poetry
 ENV POETRY_HTTP_TIMEOUT=3600
 RUN poetry install --only main --no-root --no-cache -v
 
